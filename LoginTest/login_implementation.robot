@@ -23,9 +23,16 @@ User enters password
 User tries to login
     Click Button    //*[@id="case_login"]/form/input[3]
 
-Welcome page should be opened
+Welcome page should be opened with text WELCOME
     Wait Until Page Contains Element    //*[@id="case_login"]/h3
     ${text}    Get Text    //*[@id="case_login"]/h3
     Log Many    ${text}
     Should Be Equal As Strings    ${text}    	WELCOME :)
+
+User logs out
+    Click Link    //*[@id="case_login"]/a
+    Wait Until Page Contains Element    //*[@id="case_login"]/h3
+    ${text}    Get Text    //*[@id="case_login"]/h3
+    Log Many    ${text}
+    Should Be Equal As Strings    ${text}    Please, login:
     Close Browser
