@@ -5,7 +5,7 @@ Force Tags       login
 *** Test Cases ***
 
 Login Test, Happy Flow
-    [Tags]    login
+    [Tags]    login1
     Given User opens testing page
     And User enters username
     And User enters password
