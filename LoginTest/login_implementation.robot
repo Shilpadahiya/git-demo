@@ -36,5 +36,3 @@ User logs out
     Log Many    ${text}
     Should Be Equal As Strings    ${text}    Please, login:
     Close Browser
-
-
